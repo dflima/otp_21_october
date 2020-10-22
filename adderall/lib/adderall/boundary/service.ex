@@ -15,8 +15,9 @@ defmodule Adderall.Boundary.Service do
     receive do
       :increment ->
         Counter.increment(count)
+
       {:get, from} ->
-        send from, count
+        send(from, count)
         count
     end
   end

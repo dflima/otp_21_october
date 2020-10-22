@@ -27,7 +27,6 @@ defmodule Mindex.Core.BoardTest do
   end
 
   def answers(size \\ 5) do
-
     Stream.repeatedly(&Board.random_answer/0)
     |> Enum.take(size)
   end
@@ -38,15 +37,12 @@ defmodule Mindex.Core.BoardTest do
   end
 
   describe "new/0 Property based testing" do
-
     test "result answers should be valid" do
       result =
-      answers(1000)
+        answers(1000)
         |> valid_answers?()
 
       assert result
     end
   end
-
-
 end

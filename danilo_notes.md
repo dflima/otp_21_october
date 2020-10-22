@@ -106,3 +106,9 @@ linked list:
 <<?d, ?o, ?g>>
 "dog"
 ```
+
+The core should be predictable.
+The core is mostly pure and is mostly predictable, but is always safe.
+
+Do not use struct in the boundary.
+Do not expose internal details to the boundary.

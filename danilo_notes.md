@@ -92,3 +92,17 @@ It knows how to start and stop things, and their names.
 
 How to decide the first function argument for piping?
 Take a look at the main type of the core.
+
+```iex
+Stream.repeatedly(fn -> ?R end) |> Enum.take(3) |> to_string
+```
+
+linked list:
+
+```iex
+[?a|[?b|[?c]]]
+'abc'
+
+<<?d, ?o, ?g>>
+"dog"
+```
